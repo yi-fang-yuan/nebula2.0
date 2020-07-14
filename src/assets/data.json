@@ -1,0 +1,40 @@
+{
+    "result": {
+      "0": {
+        "Info": {
+          "Hostname": "p2_pc",
+          "Resources": {
+            "MemPhysical": 135209549824,
+            "MemSwap": 146028879872,
+            "MemReserved": 1853538304,
+            "CPUs": 16,
+            "GPUs": [
+              "GeForce RTX 2070"
+            ]
+          }
+        },
+        "MemUsedMin": 0,
+        "MemUsedMax": 0,
+        "GpuUsed": false,
+        "CpuUse": 0
+      },
+      "1": {
+        "Info": {
+          "Hostname": "p1_01",
+          "Resources": {
+            "MemPhysical": 1069441933312,
+            "MemSwap": 550332522496,
+            "MemReserved": 6726557696,
+            "CPUs": 32,
+            "GPUs": []
+          }
+        },
+        "MemUsedMin": 180388626432,
+        "MemUsedMax": 206158430208,
+        "GpuUsed": false,
+        "CpuUse": 3
+      }
+    
+    },
+    "id": 3
+  }

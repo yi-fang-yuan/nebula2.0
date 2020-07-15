@@ -5,7 +5,7 @@
           <SideBar></SideBar>
 
         <mainPage />
-         </fullscreen>
+        
          <div class="fullscreenButton">
           <button v-on:click="reloadPage" class="mr-3">刷新</button>
           <button type="button" @click="toggle" >全屏</button>
@@ -13,6 +13,7 @@
           <div class="userInfo mt-3">
             <UserComputer />
           </div>
+           </fullscreen>
   </div>
     
 </template>

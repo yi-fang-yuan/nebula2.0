@@ -86,7 +86,7 @@ export default {
 .sidebar{
     height:100%;
     width: 9%;
-    position:absolute;
+    position:fixed;
     background-color: #0C0440;
     display:flex;
     flex-direction: column;

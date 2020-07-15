@@ -1,25 +1,31 @@
 <template>
  <div>
      <section class="allBars ml-4 pl-4">
-         <div class="bar mt-4">
+         
+         <div class="columns is-mobile">
+             <div class="column is-10-desktop is-12-mobile"> 
+                  <div class="bar mt-4">
              <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
-              CPU:<progress class="progress is-success ml-3 mr-3" :value="`${getCPU[0]}`" max="100">60%</progress>
-              {{getCPU[1]}} core(s) in use
+              <h5>CPU:</h5><progress class="progress is-success ml-3 mr-3" :value="`${getCPU[0]}`" max="100">60%</progress>
+              <h5>{{getCPU[1]}} core(s) in use</h5>
          </div>
          <div class="bar mt-4">
              <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
-             <p>RAM: </p>
+             <h5>RAM: </h5>
             <progress class="progress is-info ml-3 mr-3" :value="`${getRAM[0]}`" max="100">45%</progress>
-            {{getRAM[2]}} GiB/{{getRAM[1]}} GiB
+            <h5>{{getRAM[2]}} GiB/{{getRAM[1]}} GiB</h5>
          </div>
          <div class="bar mt-4">
              <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
-             VMEM:<progress class="pigu progress is-warning ml-3 mr-3" :value="`${getVirtual[0]}`" max="100">45%</progress>
-             {{getVirtual[1]}} GiB/{{getVirtual[2]}} GiB
+             <h5>VMEM:</h5><progress class="pigu progress is-warning ml-3 mr-3" :value="`${getVirtual[0]}`" max="100">45%</progress>
+             <h5>{{getVirtual[1]}} GiB/{{getVirtual[2]}} GiB</h5>
          </div>
          <div class="bar mt-4" v-if="this.computerData.Info.Resources.GPUs.length > 0">
              <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
-             <p>GPU:  {{this.computerData.Info.Resources.GPUs[0]}}, not used</p>
+             <h5>GPU:  {{this.computerData.Info.Resources.GPUs[0]}}, not used</h5>
+         </div>
+                 
+             </div>
          </div>
      </section>
  </div>
@@ -75,5 +81,7 @@ export default {
 }
 .progress {
     width: 50% !important;
+    margin-bottom: 2px !important;
 }
+
 </style>

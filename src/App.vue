@@ -10,7 +10,7 @@
           <button v-on:click="reloadPage" class="mr-3">刷新</button>
           <button type="button" @click="toggle" >全屏</button>
           </div>
-          <div class="userInfo">
+          <div class="userInfo mt-3">
             <UserComputer />
           </div>
   </div>
@@ -58,8 +58,17 @@ export default {
 
 .userInfo{
   position:fixed;
-  top:52%;
-  left:29%;
-  width:40%;
+  top:50%;
+  left:35%;
+  width:48%;
 }
+
+@media only screen and (max-width:768px){
+.userInfo{
+    position:fixed;
+    top:52%;
+    left:15%;
+    width:74%;
+} 
+ }
 </style>

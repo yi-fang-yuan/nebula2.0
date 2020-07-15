@@ -4,7 +4,7 @@
                 <div class="user mt-1 ">
                     <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i><h1>Worker  {{name}}, host {{value.Info.Hostname}} </h1>
                     </div>
-                <div class="mb-5 pb-5">
+                <div class="data mb-5 pb-5">
                     <HardWare v-bind:computerData="value" />
                 </div>
 
@@ -66,5 +66,10 @@ export default {
 .user h1{
     font-size: 10px !important;
 } 
+ }
+ @media only screen and (max-width:768px){
+.data {
+    font-size: 20px !important;
+}
  }
 </style>

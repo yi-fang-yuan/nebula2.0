@@ -83,5 +83,12 @@ export default {
     width: 50% !important;
     margin-bottom: 2px !important;
 }
-
+@media only screen and (max-width:768px){
+.columns .bar{
+    font-size: 5px !important;
+} 
+.progress{
+    height: 5px !important;
+}
+ }
 </style>

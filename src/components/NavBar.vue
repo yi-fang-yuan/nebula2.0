@@ -3,8 +3,8 @@
       <div class="rightSideNav mt-5 mr-5">
         <a href="#" class="mr-2">管理员</a>
         <p class="mr-4">欢迎登录!</p>
-        <i class="fa fa-bell"></i>
-        <i class="fa fa-power-off ml-2" aria-hidden="true"></i>
+        <i class="icons fa fa-bell"></i>
+        <i class="icons fa fa-power-off ml-2" aria-hidden="true"></i>
       </div>
     </div>
 </template>
@@ -25,5 +25,16 @@ export default {
   color: white;
   align-content: center;
   
+}
+@media only screen and (max-width: 768px){
+ .rightSideNav a{
+     font-size:13px;
+ }
+ .rightSideNav p{
+     font-size: 13px;
+ }
+ .icons{
+     font-size:13px;
+ }
 }
 </style>

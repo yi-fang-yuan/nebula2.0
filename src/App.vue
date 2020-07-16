@@ -12,7 +12,7 @@
         </div>
         <div class="content">
           <div id="navBar" class="navBar">
-            <button v-on:click="openClose" class="magicButton is-size-5">☰</button>
+            <button v-on:click="openClose" class="magicButton is-size-5 is-size-7-mobile">☰</button>
             <NavBar />
           </div>
           <div class="title">
@@ -60,23 +60,27 @@ export default {
     },
     openClose: function() {
       if (this.open) {
-        document.getElementById("mySidebar").style.width = "4vw";
-        document.getElementById("navBar").style.width = "96vw";
-        console.log(this.open);
-        this.open = false;
-        if (window.innerWidth < 700){
-          document.getElementById("mySidebar").style.width = "13vw";
-          document.getElementById("navBar").style.width = "110vw";
-        }
-      } else {
-        document.getElementById("mySidebar").style.width = "9vw";
-        document.getElementById("navBar").style.width = "91vw"
-        console.log(this.open);
-        this.open = true;
-        if (window.innerWidth < 700){
-          document.getElementById("mySidebar").style.width = "20vw";
+         if (window.innerWidth < 700){
+          document.getElementById("mySidebar").style.width = "0vw";
           document.getElementById("navBar").style.width = "100vw";
         }
+        else{
+           document.getElementById("mySidebar").style.width = "4vw";
+            document.getElementById("navBar").style.width = "96vw";
+            console.log(this.open);
+
+        }
+        this.open = false;
+      } else {
+         if (window.innerWidth < 700){
+          document.getElementById("mySidebar").style.width = "15vw";
+          document.getElementById("navBar").style.width = "100%";
+        }
+        else{
+             document.getElementById("mySidebar").style.width = "9vw";
+        document.getElementById("navBar").style.width = "91vw"
+        }
+        this.open = true;
       }
     }
   },
@@ -93,6 +97,8 @@ export default {
 .boxbox {
   display: flex;
   background-color: gainsboro;
+  height:100vh;
+  overflow:hidden;
 }
 .sidebar {
   background-color: #0c0440;
@@ -113,6 +119,9 @@ export default {
 .content{
   display:flex;
   flex-direction:column;
+  background-color: gainsboro;
+  height: 100vh;
+  width: 100vw;
 }
 .title{
   display:flex;
@@ -133,23 +142,18 @@ export default {
 
 @media only screen and (max-width: 768px) {
  .sidebar{
-   
-    width: 20vw;
+    width: 15vw;
     height: 100vh;
   }
-}
-@media only screen and (max-width: 768px) {
  .navBar{
-   
-    width: 100vw;
+    width: 100%;
   }
-}
-@media only screen and (max-width: 768px) {
  .title h4{
    font-size:15px !important;
  }
  .title .buttons{
    padding-right:10%;
+   transform: translate(17px,2px);
   }
    .title .buttons button{
     font-size:10px !important;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="home1 mt-5">
+    <div class="home1 mt-2">
       <ul>
         <li>
           <i

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div>
-      <div class="home mt-5" style="display:flex; align-items:center">
-           <i class="fa fa-home" style="color:white !important" aria-hidden="true"></i> <h3 class="pl-2">NEBULA AI</h3>
+    <div >
+      <div class="flexgod mt-1">
+           <i class="icons fa fa-home" style="color:white !important" aria-hidden="true"></i> <h3 class="word pl-2">NEBULA AI</h3>
       </div>
         
     
@@ -13,10 +13,10 @@
               <template slot="label">
                 <div class="flexgod">
                    <i
-            class="fa fa-address-book"
-            style="color:white !important; font-size:27px !important; "
+            class="icons fa fa-address-book"
+            style="color:white !important; "
             aria-hidden="true"
-          ></i><p id="words" class="word">总览</p>
+          ></i><p id="words" class="word is-size-7-mobile ">总览</p>
                   </div>
               </template>
             </b-menu-item>
@@ -26,8 +26,8 @@
               <template slot="label">
                 <div class="flexgod">
                    <i
-            class="fa fa-heartbeat"
-            style="color:white !important; font-size:27px !important"
+            class="icons fa fa-heartbeat"
+            style="color:white !important;"
             aria-hidden="true"
           ></i>
            <p id="words" class="word">综合监控</p>
@@ -40,8 +40,8 @@
             <template slot="label">
               <div class="flexgod">
                  <i
-            class="fa fa-cog"
-            style="color:white !important; font-size:27px !important"
+            class="icons fa fa-cog"
+            style="color:white !important;"
             aria-hidden="true"
           ></i>
            <p id="mySidebar" class="word">业务监控</p>
@@ -107,14 +107,24 @@ h3{
   display:flex;
   align-items: center;
   justify-content: space-around;
+  padding-top:5%;
+}
+.flexgod .icons{
+  font-size:27px;
 }
 @media only screen and (max-width: 768px) {
- .home {
-   font-size:10px;
-  }
-  .word{
+ .flexgod{
+   flex-direction: column;
+   font-size:20px;
+   margin:0;
+ } 
+ .word{
   font-size:10px;
+  padding-left:0;
+  text-align:center;
 }
+
+  
 
 }
 </style>

@@ -1,27 +1,35 @@
 <template>
  <div>
-     <section class="allBars ml-4 pl-4">
+     <section class="allBars">
          
          <div class="columns is-mobile">
              <div class="column is-10-desktop is-12-mobile"> 
                   <div class="bar mt-4">
-             <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
+                      <div v-if="greenAllowed()">
+                          <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
+                      </div>
               <h5>CPU:</h5><progress class="progress is-success ml-3 mr-3" :value="`${getCPU[0]}`" max="100">60%</progress>
               <h5>{{getCPU[1]}} core(s) in use</h5>
          </div>
          <div class="bar mt-4">
-             <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
+             <div v-if="greenAllowed()">
+                    <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
+             </div>
              <h5>RAM: </h5>
             <progress class="progress is-info ml-3 mr-3" :value="`${getRAM[0]}`" max="100">45%</progress>
             <h5>{{getRAM[2]}} GiB/{{getRAM[1]}} GiB</h5>
          </div>
          <div class="bar mt-4">
-             <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
+             <div v-if="greenAllowed()">
+                <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
+             </div>
              <h5>VMEM:</h5><progress class="pigu progress is-warning ml-3 mr-3" :value="`${getVirtual[0]}`" max="100">45%</progress>
              <h5>{{getVirtual[1]}} GiB/{{getVirtual[2]}} GiB</h5>
          </div>
          <div class="bar mt-4" v-if="this.computerData.Info.Resources.GPUs.length > 0">
-             <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
+             <div v-if="greenAllowed()">
+                  <i class="fa fa-square mr-2" style="color:green;" aria-hidden="true"></i>
+             </div>
              <h5>GPU:  {{this.computerData.Info.Resources.GPUs[0]}}, not used</h5>
          </div>
                  
@@ -34,6 +42,16 @@
 <script>
 export default {
     name:'HardWare',
+    methods:{
+        greenAllowed(){
+            if (window.innerWidth < 700){
+                return false;
+            }
+            else{
+                return true
+            }
+        }
+    },
     props:["computerData"],
         computed:{
             //Each of the following method calculates the usage of each category including their representation in percentage
@@ -70,13 +88,19 @@ export default {
 </script>
 
 <style>
+.bar h5{
+    margin-bottom:0px !important;
+}
 .allBars{
     display:flex;
     flex-direction: column;
+    margin-left:1rem;
+    padding-left:1rem;
 }
 .bar{
     display:flex;
     align-items: center;
+    text-align: center;
 
 }
 .progress {
@@ -85,10 +109,14 @@ export default {
 }
 @media only screen and (max-width:768px){
 .columns .bar{
-    font-size: 5px !important;
+    font-size: 7px !important;
 } 
 .progress{
-    height: 5px !important;
+    height: 10px !important;
+}
+.allBars{
+    padding-left:0px;
+    margin-left:0px;
 }
  }
 </style>

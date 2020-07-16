@@ -53,6 +53,9 @@ export default {
 </script>
 
 <style>
+.user h1{
+    margin-top:13px !important;
+}
 .user{
     display:flex;
     align-items: center;
@@ -60,16 +63,12 @@ export default {
 .userName{
     display:flex;
     flex-direction: column;
+    overflow:auto;
 
 }
 @media only screen and (max-width:768px){
 .user h1{
     font-size: 10px !important;
 } 
- }
- @media only screen and (max-width:768px){
-.data {
-    font-size: 20px !important;
-}
  }
 </style>

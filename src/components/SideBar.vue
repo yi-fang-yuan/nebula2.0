@@ -69,20 +69,7 @@ export default {
       hasLabel: false
     };
   },
-  methods: {
-    // openClose: function() {
-    //   if (this.open) {
-    //     document.getElementById("mySidebar").style.width = "4vw";
-    //      console.log(this.open);
-    //     this.open = false;
-    //   } else {
-    //     document.getElementById("mySidebar").style.width = "9vw";
-    //     console.log(this.open);
-    //     this.open = true;
-
-    //   }
-    // }
-  }
+ 
 };
 </script>
 

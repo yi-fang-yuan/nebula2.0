@@ -43,26 +43,6 @@
                 <li>移除</li>
             </ul>
         </div>
-        <!-- <div class="columns ml-5 is-mobile">
-          <div class="da column is-3-desktop is-2-mobile">
-            <p class="groups">添加集群</p>
-          </div>
-          <div class="da column is-3-desktop is-2-mobile">
-            <p class="groups">添加设备</p>
-          </div>
-          <div class="da column is-3-desktop is-3-mobile">
-            <p class="groups">添加监测点</p>
-          </div>
-          <div class="da column is-2-desktop is-2-mobile">
-            <p class="groups">编辑</p>
-          </div>
-          <div class="da column is-2-desktop is-2-mobile">
-            <p class="groups">跳转</p>
-          </div>
-          <div class="da column is-2-desktop is-2-mobile">
-            <p class="groups">移除</p>
-          </div>
-        </div> -->
       </div>
       <hr style="margin-left:3%; color:red" />
       <div class="columns is-mobile">
@@ -80,13 +60,6 @@
           </el-collapse>
         </div>
       </div>
-      <!-- <hr style="margin-left:3%;" />
-      <div class="columns is-mobile">
-        <div class="column" style="margin-left:10%; display:flex; align-items:center">
-          <i class="fa fa-angle-down mr-2"></i>
-          <p>P2处理服务器 01</p>
-        </div>
-      </div>-->
 
       <section></section>
     </div>
@@ -103,16 +76,6 @@ export default {
   data() {
     return {
       isOpen: 0,
-      collapses: [
-        {
-          title: "Title 1",
-          text: "Text 1"
-        },
-        {
-          title: "Title 2",
-          text: ""
-        }
-      ]
     };
   }
 };

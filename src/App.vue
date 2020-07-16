@@ -66,7 +66,7 @@ export default {
         }
         else{
            document.getElementById("mySidebar").style.width = "4vw";
-            document.getElementById("navBar").style.width = "96vw";
+            document.getElementById("navBar").style.width = "100%";
             console.log(this.open);
 
         }
@@ -78,7 +78,7 @@ export default {
         }
         else{
              document.getElementById("mySidebar").style.width = "9vw";
-        document.getElementById("navBar").style.width = "91vw"
+        document.getElementById("navBar").style.width = "100%"
         }
         this.open = true;
       }
@@ -114,7 +114,7 @@ export default {
   justify-content: space-between;
   align-items:center;
   height:5vh;
-  width:91vw;
+  width:100%;
 }
 .content{
   display:flex;
